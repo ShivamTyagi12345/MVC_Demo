@@ -6,8 +6,6 @@ const dogRoutes = require('./routes/dogRoutes');
 // express app
 const app = express();
 
-// connect to mongodb & listen for requests
-const dbURI = "mongodb+srv://hetvi:mongoatlas@cluster0.7yfhgbx.mongodb.net/dog-tuts?retryWrites=true&w=majority";
 
 require('dotenv').config();
 // console.log(process.env.MONGO_URL);
