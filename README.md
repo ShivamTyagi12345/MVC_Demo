@@ -1,6 +1,9 @@
 # MVC_Demo
 This successfully demonstrates the integration of NodeJs and Mongo Db to create a Rest API that performs basic CRUD operations
 
+Read the Blog to know more about [MVC and role of API](https://shivamtyagi.hashnode.dev/how-model-view-controller-components-talk-to-each-other-via-apis)
+
+
 Create Read  and Delete
 
 ![Paws🐾 _ All Dogs - Brave 2022-08-10 19-13-11](https://user-images.githubusercontent.com/60812924/183923110-00213166-651e-40b1-8082-53ade6c619ab.gif)
