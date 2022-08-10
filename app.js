@@ -71,7 +71,7 @@ app.get('/single-dog', (req, res) => {
     .then(result => {
       res.send(result);
     })
-    .catch(err => {
+    .catch(error => {
       console.log(err);
     });
 });
