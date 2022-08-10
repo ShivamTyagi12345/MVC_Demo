@@ -7,10 +7,11 @@ const dogRoutes = require('./routes/dogRoutes');
 const app = express();
 
 
-require('dotenv').config();
+// require('dotenv').config();
 // console.log(process.env.MONGO_URL);
+const MONGO_URL="mongodb+srv://meme:meme@cluster0.7yfhgbx.mongodb.net/?retryWrites=true&w=majority"
 
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => app.listen(3000))
   .catch(err => console.log(err));
 
