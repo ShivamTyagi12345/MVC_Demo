@@ -1,5 +1,9 @@
 # MVC_Demo
+
+🎁 Try the app [Public Url🎉](https://mvcappdockerized.herokuapp.com/dogs)
+
 This successfully demonstrates the integration of NodeJs and Mongo Db to create a Rest API that performs basic CRUD operations
+
 
 Read the Blog to know more about [MVC and role of API](https://shivamtyagi.hashnode.dev/how-model-view-controller-components-talk-to-each-other-via-apis)
 
