@@ -12,7 +12,7 @@ require('dotenv').config();
 
 
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen(process.env.PORT||3000))
   .catch(err => console.log(err));
 
 // register view engine
