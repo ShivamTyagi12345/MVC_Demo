@@ -21,3 +21,6 @@ Create Read  and Delete
 3.   Create a `.env` file in the root folder and paste the connection string of your choice `mongodb+srv://<username>:<password>@cluster0.7yfhgbx.mongodb.net/?retryWrites=true&w=majority` 
 4.  `nodemon app`
 
+## Access the  Docker Image 
+
+👉`docker pull twaves2611/node-web-app`
