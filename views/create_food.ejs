@@ -5,12 +5,12 @@
   <%- include("./partials/nav.ejs") %>
 
   <div class="create-blog content">
-    <form action="/dogs" method="POST">
-      <label for="title">Train PNR:</label>
-      <input type="number" id="title" name="title" required>
-      <label for="snippet">Source and Destination</label>
+    <form action="/foods" method="POST">
+      <label for="title">Hotel Name:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="snippet">Dish served🍔</label>
       <input type="text" id="snippet" name="snippet" required>
-      <label for="body">Put in a good word for your Trains🚂:</label>
+      <label for="body">Put in a good word for your Hotel🏩:</label>
       <textarea id="body" name="body" required></textarea>
       <button>Submit</button>
     </form>

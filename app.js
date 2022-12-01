@@ -2,7 +2,9 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Dog = require('./models/dog');
+const Food = require('./models/food');
 const dogRoutes = require('./routes/dogRoutes');
+const foodRoutes = require('./routes/foodRoutes');
 // express app
 const app = express();
 
@@ -28,14 +30,10 @@ app.use((req, res, next) => {
 });
 
 // mongoose & mongo tests
-app.get('/add-dog', (req, res) => {
-  const dog = new Dog({
-    title: 'new dog 2',
-    snippet: 'about my new dog',
-    body: 'more about my new dog'
-  })
 
-  dog.save()
+
+app.get('/all-dogs', (req, res) => {
+  Dog.find()
     .then(result => {
       res.send(result);
     })
@@ -44,8 +42,8 @@ app.get('/add-dog', (req, res) => {
     });
 });
 
-app.get('/all-dogs', (req, res) => {
-  Dog.find()
+app.get('/all-foods', (req, res) => {
+  Food.find()
     .then(result => {
       res.send(result);
     })
@@ -67,15 +65,21 @@ app.post('/dogs', (req, res) => {
       });
   });
 
-app.get('/single-dog', (req, res) => {
-  Dog.findById('62f3480581ae55fc243f7dae')
-    .then(result => {
-      res.send(result);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-});
+  app.post('/foods', (req, res) => {
+    // console.log(req.body);
+    const food = new Food(req.body);
+  
+    food.save()
+      .then(result => {
+        res.redirect('/foods');
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
+
+
+
 
 app.get('/', (req, res) => {
   res.redirect('/dogs');
@@ -87,6 +91,7 @@ app.get('/about', (req, res) => {
 
 //Dog routes
 app.use('/dogs', dogRoutes);
+app.use('/foods', foodRoutes);
 
 
 // 404 page

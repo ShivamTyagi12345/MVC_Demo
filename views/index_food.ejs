@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="blogs content">
+    <h2>All Cusines</h2>
+
+    <% if (foods.length > 0) { %>
+      <% foods.forEach(food => { %>
+        <a class="single" href="/foods/<%= food._id %>">
+        <h3 class="title"><%= food.title %></h3>
+        <p class="snippet"><%= food.snippet %></p>
+        </a>
+      <% }) %>
+    <% } else { %>
+      <p>There are no cuisines to display...</p>
+    <% } %>
+    
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

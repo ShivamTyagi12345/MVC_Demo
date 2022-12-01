@@ -27,7 +27,7 @@ const dog_create_get = (req, res) => {
 
 const dog_create_post = (req, res) => {
     const dog = new Dog(req.body);
-    blog.save()
+    dog.save()
         .then(result => {
             res.redirect('/dogs');
         })
